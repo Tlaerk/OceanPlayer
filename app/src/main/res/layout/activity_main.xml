@@ -18,7 +18,6 @@
         app:layout_constraintBottom_toTopOf="@+id/btnPlay"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
         android:layout_margin="16dp"
         />
 
@@ -44,10 +43,43 @@
         android:textColor="#FFFFFF"
         android:background="@drawable/button_background"
         app:layout_constraintTop_toBottomOf="@+id/btnPlay"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnPause"
+        app:layout_constraintBottom_toTopOf="@+id/tvCurrentTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
