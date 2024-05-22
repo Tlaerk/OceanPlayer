@@ -8,41 +8,79 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnSelect"
+        android:id="@+id/btnAddAudio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Select Audio"
+        android:text="Add Audio"
         android:textColor="#FFFFFF"
         android:background="@drawable/button_background"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnPlay"
+        app:layout_constraintBottom_toTopOf="@+id/tvAudioCount"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp"
         />
 
+    <TextView
+        android:id="@+id/tvAudioCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Audios: 0"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddAudio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/tvCurrentAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Now Playing: None"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/tvAudioCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
     <Button
-        android:id="@+id/btnPlay"
+        android:id="@+id/btnPlayPause"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Play"
         android:textColor="#FFFFFF"
         android:background="@drawable/button_background"
-        app:layout_constraintTop_toBottomOf="@+id/btnSelect"
-        app:layout_constraintBottom_toTopOf="@+id/btnPause"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurrentAudio"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp"
         />
 
     <Button
-        android:id="@+id/btnPause"
+        android:id="@+id/btnNext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Pause"
+        android:text="Next"
         android:textColor="#FFFFFF"
         android:background="@drawable/button_background"
-        app:layout_constraintTop_toBottomOf="@+id/btnPlay"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayPause"
+        app:layout_constraintBottom_toTopOf="@+id/btnPrevious"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        />
+
+    <Button
+        android:id="@+id/btnPrevious"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Previous"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        app:layout_constraintTop_toBottomOf="@+id/btnNext"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +91,7 @@
         android:id="@+id/seekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btnPause"
+        app:layout_constraintTop_toBottomOf="@+id/btnPrevious"
         app:layout_constraintBottom_toTopOf="@+id/tvCurrentTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
